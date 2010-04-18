@@ -2,6 +2,8 @@
  * Copyright (c) 2010.
  */
 
+
+
 package org.kar.groovy.validation
 
 import groovy.xml.StreamingMarkupBuilder
@@ -10,7 +12,7 @@ import org.codehaus.groovy.tools.xml.DomToGroovy
 /**
  * @author Kelly Robinson
  */
-class GroovyXmlConverstionUtil
+class GroovyXmlConversionUtil
 {
     /**
      * Convert an xml file into the equivalent Groovy syntax

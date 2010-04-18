@@ -2,9 +2,11 @@
  * Copyright (c) 2010.
  */
 
+
+
 package org.kar.groovy.validation
 
-import org.kar.groovy.validation.GroovyXmlConverstionUtil as util
+import org.kar.groovy.validation.GroovyXmlConversionUtil as util
 
 import org.custommonkey.xmlunit.Diff
 import org.custommonkey.xmlunit.XMLUnit
