@@ -4,6 +4,8 @@
 
 
 
+
+
 package org.kar.groovy.validation
 
 /**
@@ -19,10 +21,9 @@ class TestValidations
             'default-package'('org.kar.test.objects')
             bean('class': 'ValidateTestableClass') {
                 ['name'].each {
-                    field(name: 'name') {
+                    field(name: it) {
                         constraint(annotation: 'javax.validation.constraints.NotNull')
                     }
-
                 }
                 field(name: 'id') {
                     constraint(annotation: 'javax.validation.constraints.DecimalMin') {
