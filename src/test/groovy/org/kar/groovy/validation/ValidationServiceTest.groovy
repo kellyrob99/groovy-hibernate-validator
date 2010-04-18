@@ -6,6 +6,8 @@
 
 
 
+
+
 package org.kar.groovy.validation
 
 import javax.validation.ConstraintViolation
@@ -24,13 +26,13 @@ class ValidationServiceTest extends GroovyTestCase
         def service = new ValidationService()
 
         def invalid = new ValidateTestableClass() //should never validate
-        def idBelowMinimum = new ValidateTestableClass(name: 'name', id: 1, enabled: true) //invalid id
-        def enabledIsFalse = new ValidateTestableClass(name: 'name', id: 2, enabled: false) //invalid enabled
-        def valid = new ValidateTestableClass([name: 'name', id: 2, enabled: true]) //should always validate
+        def idBelowMinimum = new ValidateTestableClass(name: 'name', description: 'description', id: 1, enabled: true) //invalid id
+        def enabledIsFalse = new ValidateTestableClass(name: 'name', description: 'description', id: 2, enabled: false) //invalid enabled
+        def valid = new ValidateTestableClass(name: 'name', description: 'description', id: 2, enabled: true) //should always validate
 
         //violate all 3 rules
         def allErrors = service.validate(invalid, TestValidations.strictConstraint)
-        assertEquals("Three validation failures expected but got instead: $allErrors", 3, allErrors.size())
+        assertEquals("Four validation failures expected but got instead: $allErrors", 4, allErrors.size())
 
         //violate id must be >=2
         List<ConstraintViolation> idMin = service.validate(idBelowMinimum, TestValidations.strictConstraint) as List

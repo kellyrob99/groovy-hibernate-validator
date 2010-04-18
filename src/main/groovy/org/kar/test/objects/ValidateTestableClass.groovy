@@ -4,6 +4,8 @@
 
 
 
+
+
 package org.kar.test.objects
 
 /**
@@ -13,5 +15,6 @@ class ValidateTestableClass
 {
     int id
     String name
+    String description
     boolean enabled
 }
