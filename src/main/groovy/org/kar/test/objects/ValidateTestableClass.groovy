@@ -6,6 +6,8 @@
 
 
 
+
+
 package org.kar.test.objects
 
 /**
@@ -17,4 +19,5 @@ class ValidateTestableClass
     String name
     String description
     boolean enabled
+    Map map
 }

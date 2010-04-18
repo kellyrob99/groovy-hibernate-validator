@@ -8,6 +8,8 @@
 
 
 
+
+
 package org.kar.groovy.validation
 
 /**
@@ -22,7 +24,7 @@ class TestValidations
                 'xsi:schemaLocation': 'http://jboss.org/xml/ns/javax/validation/mapping validation-mapping-1.0.xsd') {
             'default-package'('org.kar.test.objects')
             bean('class': 'ValidateTestableClass') {
-                ['name', 'description'].each {
+                ['name', 'description', 'map'].each {
                     field(name: it) {
                         constraint(annotation: 'javax.validation.constraints.NotNull')
                     }
